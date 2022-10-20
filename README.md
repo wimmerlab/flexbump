@@ -5,10 +5,10 @@ Code of the computational models and psychophysical data of the paper "Flexible 
 
 The scripts have been tested in Python 3.9 running on Ubuntu 22.04 and Debian 11.
 
-Create a python environment and install the `requirements.txt`
+Create a python environment and install the `install/requirements.txt`
 
 ```shell
-pip install -r requirements.txt
+pip install -r install/requirements.txt
 ```
 
 ## Running the neural network simulations
