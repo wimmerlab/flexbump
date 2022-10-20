@@ -1,0 +1,189 @@
+###################################################
+# Config file: system parameters and architecture #
+###################################################
+# General options, default values (can be overridden by command line options)
+#̣ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Simulation options (non-mutable):
+  -f --file:
+    description: "Configuration file."
+    default:     "./conf_paper.txt"
+    name:        "<conf file>"
+    choices:     ~
+  -db --debug:
+    description: "Debugging level. Default is INFO."
+    default:     INFO
+    name:        "<debug>"
+    choices:     [DEBUG, INFO, ERROR, WARNING, CRITICAL]
+  -save_fr --save_firing_rate:
+    description: "Save the firing rate."
+    default:     'partial'
+    name:        "<save>"
+    choices:     ['none', 'all', 'partial']
+  -no_save --dont_save_results:
+    description: "Do not save simulation results."
+    default:     False
+    name:        "<no_save>"
+    choices:     [False, True]
+  -overwrite --overwrite_results:
+    description: "Overwrite simulation results."
+    default:     False
+    name:        "<overwrite>"
+    choices:     [False, True]
+  -plot --plot_sample:
+    description: "Plot sample trial."
+    default:     False
+    name:        "<plot>"
+    choices:     [True, False]
+  -show_plots --show_plots:
+    description: "Show generated plots, if any."
+    default:     False
+    name:        "<show_plots>"
+    choices:     [True, False]
+  -no_bump --load_without_bump:
+    description: "Load initial conditions without the bump."
+    default:     False
+    name:        "<no_bump>"
+    choices:     [True, False]
+  -nobias --set_initial_phase:
+    description: "Set the initial phase of the bump."
+    default:     False
+    name:        "<nobias>"
+    choices:     [True, False]    
+  -init_save --save_initial_firing_rate:
+    description: "Save the firing rate."
+    default:     False
+    name:        "<save_init>"
+    choices:     [True, False]
+  -init_load --load_initial_firing_rate:
+    description: "Load the firing rate."
+    default:     False
+    name:        "<load_init>"
+    choices:     [True, False]
+  -ntrials --num_trials:
+    description: "Number of trials."
+    default:     10000
+    name:        "<ntrials>"
+    choices:     ~
+  -chunk --chunk:
+    description: "Number of trials per block."
+    default:     50
+    name:        "<chunk>"
+    choices:     ~
+  -cpus --num_cpus:
+    description: "Number of CPUs to use."
+    default:     16
+    name:        "<cpus>"
+    choices:     ~
+  -tmax --simulation_time:
+    description: "Simulation time in seconds."
+    default:     2.01
+    name:        "<tmax>"
+    choices:     ~
+  -tau --time_constant:
+    description: "Integration time constant."
+    default:     0.02
+    name:        "<tau>"
+    choices:     ~
+  -dt --time_step:
+    description: "Integration time step."
+    default:     0.0002
+    name:        "<dt>"
+    choices:     ~
+Stimulus:
+  -sigmaOU --standard_deviation:
+    description: "Standard deviation of the OU process associated to the stimulus."
+    default:     0.15
+    name:        "<sd_ou_stimulus>"
+    choices:     ~
+  -tauOU --time_constant_noise:
+    description: "Integration time constant of the OU process."
+    default:     0.001
+    name:        "<tauOU>"
+    choices:     ~
+  -i0 --mean_input_over_critical_input:
+    description: "Additional mean input over critical input (Turing bifurcation boundary)."
+    default:     0.05
+    name:        "<i0>"
+    choices:     ~
+  -i0_init --mean_input_over_critical_input_initial_state:
+    description: "Additional mean input over critical input (Turing bifurcation boundary) at the initial state."
+    default:     0.05
+    name:        "<i0_init>"
+    choices:     ~
+  -i1 --amp_stimulus:
+    description: "Amplitue of stimuli."
+    default:     0.005
+    name:        "<i1>"
+    choices:     ~
+  -i2 --input_decision:
+    description: "Amplitude of decision signal."
+    default:     0.00
+    name:        "<i2>"
+    choices:     ~
+  -nframes --number_of_frames:
+    description: "Number of frames that each stimulus has."
+    default:     8
+    name:        "<nframes>"
+    choices:     ~
+  -cue_duration --cue_duration:
+    description: "Duration of each stimulus frame."
+    default:     0.250
+    name:        "<cue_d>"
+    choices:     ~
+  -save_stim --save_stimuli_data:
+    description: "Save the created stimuli data."
+    default:     False
+    name:        "<save_stim>"
+    choices:     [True, False]
+  -stim_file --stimulus_file:
+    description: "File containing the stimulus (design matrix)."
+    default:     'default'
+    name:        "<stim_f>"
+    choices:     ~    
+Network:
+  -n --n:
+    description: "Network discretization."
+    default:     200
+    name:        "<n>"
+    choices:     ~
+  -m --fsmodes:
+    description: "Modes of connectivity (Fourier series)."
+    default:     [-2.0, 1.0, 0.5]
+    name:        "<modes_connectivity>"
+    choices:     ~
+Decision_circuit:
+  -js --js:
+    description: "Self coupling. Recurrent excitatory connection strength."
+    default:     1.9
+    name:        "<js>"
+    choices:     ~
+  -jc --jc:
+    description: "Cross coupling. Inhibitory cross connection strength."
+    default:     1.0
+    name:        "<jc>"
+    choices:     ~
+  -mod --modulation_of_integrated_signal:
+    description: "Modulation applied to the integrated signal."
+    default:     2.0
+    name:        "<mod>"
+    choices:     ~
+  -max --maximum_value_of_kernel:
+    description: "Maximum value of the spatial kernel."
+    default:     0.003
+    name:        "<max>"
+    choices:     ~
+  -i_rest --rest_input:
+    description: "Constant baseline input into the decision network."
+    default:     0.33
+    name:        "<irest>"
+    choices:     ~
+  -i_urge --urge_input:
+    description: "Constant urgency input into the decision network."
+    default:     0.45
+    name:        "<iurge>"
+    choices:     ~
+  -go_int --urgency_interval:
+    description: "Time window of the urgency signal (seconds)."
+    default:     0.5
+    name:        "<goint>"
+    choices:     ~
