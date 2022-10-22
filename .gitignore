@@ -214,3 +214,5 @@ cython_debug/
 /src/results/simu*.npy
 /log
 !/src/lib/
+
+.DS_Store
