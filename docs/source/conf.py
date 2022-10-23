@@ -97,9 +97,9 @@ exclude_patterns = []
 #
 panels_add_bootstrap_css = False  # Panel extension loads it by default, and it is already loaded
 html_theme = "sphinx_book_theme"
-html_title = "FlexBump"
-# html_logo = sys.path[0] + "/docs/source/_static/flex_bump.svg"
-# html_favicon = sys.path[0] + "/docs/source/_static/favicon/crm.svg"
+html_title = "Flexible integration of continuous sensory evidence in perceptual estimation tasks"
+html_logo = sys.path[0] + "/docs/source/_static/flex_bump.svg"
+html_favicon = sys.path[0] + "/docs/source/_static/flexbump_icon.svg"
 
 htmlhelp_basename = "flex_bump"
 
