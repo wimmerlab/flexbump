@@ -27,7 +27,7 @@ Logging and debugging methods and objects
    log_conf          Sets up logging configuration.
    MyLog             A class that makes use of :func:`msg`.
    debug_func        Decorator that prints the function signature ant its return value.
-   count_call        Decorator that counts the number of calls of the decorated function.
+   count_calls       Decorator that counts the number of calls of the decorated function.
 
 Path-related methods
 --------------------

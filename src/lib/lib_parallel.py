@@ -2,7 +2,7 @@
 Parallelization library for trial-based simulations
 ===================================================
 
-.. currentmodule:: lib_parallel
+.. module:: lib_parallel
    :platform: Linux
    :synopsis: module for handling parallel computation of simulations
 
@@ -24,12 +24,12 @@ Methods included in :class:`ParallelSimulation`
 .. autosummary::
    :toctree: generated/
 
-   __init__           Initialization of the parallel framework.
-   __call__           Execution: call to trial distributor and simulation.
-   distribute_trials  Set up the iterator that is passed to :func:`pool.starmap_async`
-   run_task_unpack    Intermediary function that unpacks arguments, separating
-                       simulation-specific arguments and those related to the
-                       parallelization process.
+   ParallelSimulation.__init__           .. Initialization of the parallel framework.
+   ParallelSimulation.__call__           .. Execution: call to trial distributor and simulation.
+   ParallelSimulation.distribute_trials  .. Set up the iterator that is passed to :func:`pool.starmap_async`
+   ParallelSimulation.run_task_unpack    .. Intermediary function that unpacks arguments, separating
+                                         .. simulation-specific arguments and those related to the
+                                         .. parallelization process.
 
 Static methods included in :class:`ParallelSimulation`
 ------------------------------------------------------
@@ -37,11 +37,11 @@ Static methods included in :class:`ParallelSimulation`
 .. autosummary::
    :toctree: generated/
 
-   poolcontext        Auxiliary function that modifies the behavior of a *Terminate* signal.
-   worker             Function that extracts the first integer value out of a string:
-                       useful to get the worker's *id*.
-   print_table        Print a table with a given number of rows and columns, and their
-                       associated titles and headers.
+   ParallelSimulation.poolcontext        .. Auxiliary function that modifies the behavior of a *Terminate* signal.
+   ParallelSimulation.worker             .. Function that extracts the first integer value out of a string:
+                                         .. useful to get the worker's *id*.
+   ParallelSimulation.print_table        .. Print a table with a given number of rows and columns, and their
+                                         .. associated titles and headers.
 
 Implementation
 --------------
@@ -132,6 +132,8 @@ Where both ``local_args`` and ``global_args`` are passed as ``tuple``s.
 
 """
 
+import sys
+import pathlib
 import ctypes
 import logging
 import multiprocessing as mp
@@ -143,7 +145,12 @@ from contextlib import contextmanager
 from multiprocessing.managers import SyncManager
 import numpy as np
 
-from lib_sconf import print_at
+try:
+    sys.path.append(pathlib.Path(__file__).parent.absolute().as_posix())
+    from lib_sconf import print_at
+except ImportError as imp_err:
+    raise imp_err
+
 
 logging.getLogger('lib_parallel').addHandler(logging.NullHandler())
 
@@ -262,7 +269,8 @@ class ParallelSimulation:
     @staticmethod
     @contextmanager
     def poolcontext(*args, **kwargs):
-        """Modify the default signal handling behavior of :py:class:`multiprocessing.Pool` to ignore the
+        """
+        Modify the default signal handling behavior of :class:`~multiprocessing.pool.Pool` to ignore the
         ``SIGINT`` (Ctrl + C) signal.
 
         .. warning::
