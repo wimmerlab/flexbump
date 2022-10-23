@@ -15,6 +15,7 @@ import sys
 from urllib.request import urlretrieve
 sys.path.insert(0, os.path.abspath('../../'))
 sys.path.insert(1, os.path.abspath('../../src'))
+sys.path.insert(2, os.path.abspath('../../src/lib'))
 
 # -- Project information -----------------------------------------------------
 
@@ -108,6 +109,9 @@ htmlhelp_basename = "flex_bump"
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 html_css_files = ["crm.css"]
+html_js_files = [
+    'read-more.js',
+]
 html_theme_options = {
     "repository_url": "https://github.com/wimmerlab/flexbump",
     "collapse_navigation": True,
@@ -115,7 +119,7 @@ html_theme_options = {
     "use_issues_button": True,
     "use_download_button": True,
     "use_edit_page_button": False,
-    "repository_branch": "dev_docs",
+    "repository_branch": "main",
     "path_to_docs": "docs",
     "launch_buttons": {
         "colab_url": "https://colab.research.google.com",
@@ -158,9 +162,7 @@ intersphinx_mapping = {
     'numpy-tutorials': ('https://numpy.org/numpy-tutorials', None),
     'numpydoc': ('https://numpydoc.readthedocs.io/en/latest', None),
     'dlpack': ('https://dmlc.github.io/dlpack/latest', None),
-    'openpyxl': ('https://openpyxl.readthedocs.io/en/latest', None),
-    "seaborn": ("https://seaborn.pydata.org/", None),
-    "cx_Oracle": ("https://cx-oracle.readthedocs.io/en/latest", None),
+    'seaborn': ("https://seaborn.pydata.org/", None),
 }
 
 # -----------------------------------------------------------------------------
