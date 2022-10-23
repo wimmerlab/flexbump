@@ -89,3 +89,25 @@ dt.field-odd, dt.field-even {
 .container, .container-lg, .container-md, .container-sm, .container-xl {
     max-width: 1600px;  /* Default is 1400px */
 }
+
+/* Read more blocks */
+.sidebar-box {
+  max-height: 140px;
+  position: relative;
+  overflow: hidden;
+}
+.sidebar-box .read-more {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  margin: 0; padding: 45px 0;
+  /* "transparent" only works here because == rgba(0,0,0,0) */
+  background-image: linear-gradient(to bottom, transparent, #ffffff);
+  color: white;
+  --pst-color-link: white;
+}
+.sidebar-box .read-more .btn-secondary {
+  background-color: #911230ff;
+}

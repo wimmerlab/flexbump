@@ -39,6 +39,6 @@ the script as follows:
 ```shell
 python figs_paper.py -figsize 4.2 3.6  -eslim 90 -i0s 0.02 0.05 0.08
 ```
-Some of the paths that point to the data should be changed before running this script. In addition, some
-of the data is not included and should be generated first by running simulations.
+Some of the paths that point to the data should be changed before running this script. In addition, some data is not 
+included and should be generated first by running simulations.
 
