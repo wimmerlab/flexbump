@@ -1,0 +1,113 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap');*/
+
+/* Main page overview cards */
+.intro-card {
+  background: #fff;
+  border-radius: 0;
+  padding: 30px 10px 20px 10px;
+  margin: 10px 0;
+}
+
+.intro-card p.card-text {
+  margin: 0;
+}
+
+.intro-card .card-img-top {
+  height: 52px;
+  width: 52px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.intro-card .card-header {
+  border: none;
+  background-color: white;
+  color: #911230ff !important;
+  font-size: var(--pst-font-size-h5);
+  font-weight: bold;
+  padding: 2.5rem 0 0.5rem 0;
+}
+
+.intro-card .card-footer {
+  border: none;
+  background-color: white;
+  --pst-color-link: white;
+}
+
+.intro-card .card-footer .btn-secondary {
+  background-color: #911230ff;
+}
+
+.intro-card .card-footer p.card-text {
+  max-width: 220px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+}
+
+/* api docs */
+/* Style of class, function and method in the API */
+.class > dt, .function > dt, .method > dt {
+  display: table;
+  margin: 6px 0;
+  font-size: 90%;
+  line-height: normal;
+  background: #e7f2fa;
+  color: #2980B9;
+  border-top: solid 3px #6ab0de;
+  padding: 6px;
+  position: relative
+}
+
+/* override some style attributes of function and method in the API */
+.function > dt, .method > dt {
+    margin-bottom: 6px;
+    border: none;
+    border-left: solid 3px #ccc;
+    background: #f0f0f0;
+    color: #555
+}
+
+.class > dt::after, .function > dt::after, .method > dt::after {
+  overflow: auto;
+}
+
+.viewcode-link {
+  float: right;
+}
+
+/* Parameters list style */
+dt.field-odd, dt.field-even {
+    margin-bottom: 6px;
+    border: none;
+    border-left: solid 3px #ccc;
+    background: #f0f0f0;
+    color: #555
+}
+
+/* Modify width of main content */
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1600px;  /* Default is 1400px */
+}
+
+/* Read more blocks */
+.sidebar-box {
+  max-height: 140px;
+  position: relative;
+  overflow: hidden;
+}
+.sidebar-box .read-more {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  margin: 0; padding: 45px 0;
+  /* "transparent" only works here because == rgba(0,0,0,0) */
+  background-image: linear-gradient(to bottom, transparent, #ffffff);
+  color: white;
+  --pst-color-link: white;
+}
+.sidebar-box .read-more .btn-secondary {
+  background-color: #911230ff;
+}

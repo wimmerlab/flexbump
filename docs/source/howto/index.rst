@@ -1,0 +1,6 @@
+.. _howto:
+
+Getting started
+===============
+
+

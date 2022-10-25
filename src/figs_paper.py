@@ -33,14 +33,16 @@ __docformat__ = 'reStructuredText'
 # Figure 1 of the paper ##
 # #### #### #### #### ####
 @mlab.show
-def plot_fig1_3d(datafile=None, trial=100, perfect=False, fframe=-1, **kwargs):
-    """3D representation of the activity of the network and stimuli. This 3d plot corresponds to panel C
+def plot_fig1_3d(datafile=None, trial=47, perfect=True, fframe=-1, **kwargs):
+    """
+    3D representation of the activity of the network and stimuli. This 3d plot corresponds to panel C
     on Fig. 1. The plot must be saved from mayavi GUI then imported to GIMP where the alpha channel can be added
-    and transform color (white) to alpha. Finally it is cut to the content and saved as .png to be exported to
+    and transform color (white) to alpha. Finally, it is cut to the content and saved as .png to be exported to
     Inkscape, where the rest of the elements are added as needed.
 
     .. Note:
-        pefect=True is compulsory for now.
+
+        ``pefect=True`` is compulsory for now.
 
     :param str datafile: file containing the simulation data.
     :param int trial: trial number.
@@ -2475,7 +2477,7 @@ if __name__ == '__main__':
     logger, mylog = log_conf(pars.args.db, name='fig_generator')
     init_options.update(conf_options)
     if pars.args.fig == 1:
-        # options: linewidth=3.0, trial=100, perfect=True, figsize=(800.0, 1080.0)
+        # options: linewidth=3.0, trial=47, perfect=True, figsize=(800.0, 1080.0)
         init_options.update(trial=pars.args.trials[0])
         fs = init_options.pop('figsize')
         if pars.args.threed:
