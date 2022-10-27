@@ -44,10 +44,11 @@ simulate the ring model navigate towards the :ref:`howto` page. A more detailed 
 :ref:`user` or directly at :ref:`code`. Finally, the documentation of the experimental
 data is located at :ref:`data`.
 
-.. grid:: 2
+.. grid:: 1 1 2 2
 
     .. grid-item-card::
        :img-top: ./_static/index-images/getting_started.svg
+       :class-card: front-card
 
        Getting started
        ^^^^^^^^^^^^^^^
@@ -66,6 +67,7 @@ data is located at :ref:`data`.
 
     .. grid-item-card::
        :img-top: ./_static/index-images/user_guide.svg
+       :class-card: front-card
 
        User guide
        ^^^^^^^^^^
@@ -83,6 +85,7 @@ data is located at :ref:`data`.
 
     .. grid-item-card::
        :img-top: ./_static/index-images/data.svg
+       :class-card: front-card
 
        Data
        ^^^^
@@ -102,6 +105,7 @@ data is located at :ref:`data`.
 
     .. grid-item-card::
        :img-top: ./_static/index-images/api.svg
+       :class-card: front-card
 
        API reference
        ^^^^^^^^^^^^^
