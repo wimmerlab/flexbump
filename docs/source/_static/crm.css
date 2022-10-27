@@ -34,6 +34,7 @@ pre, code {
 :root {
   --sd-color-secondary: #911230ff !important;
   --sd-color-secondary-highlight: #670c1e !important;
+  --sd-color-secondary-text: white;
 }
 /* Main page overview cards */
 

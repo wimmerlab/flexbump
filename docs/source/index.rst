@@ -34,7 +34,9 @@ Flexible integration of continuous sensory evidence in perceptual estimation tas
          stimulus integration in perceptual estimation tasks.</p>
      <p class="read-more"><a href="#" class="sphinx-bs btn text-wrap btn-secondary stretched-link reference internal">Read More</a></p>
    </div>
-   
+
+-----
+
 **This repository**
 
 Here you will find the code and the data that supports our work. In order to get a general idea on how to
@@ -116,6 +118,8 @@ data is located at :ref:`data`.
 
            To the api guide
 
+Contents
+--------
 
 .. toctree::
    :maxdepth: 3
