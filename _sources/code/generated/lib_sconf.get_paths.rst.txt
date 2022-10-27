@@ -1,0 +1,6 @@
+﻿lib\_sconf.get\_paths
+=====================
+
+.. currentmodule:: lib_sconf
+
+.. autofunction:: get_paths

@@ -1,0 +1,6 @@
+﻿lib\_sconf.dict\_depth
+======================
+
+.. currentmodule:: lib_sconf
+
+.. autofunction:: dict_depth

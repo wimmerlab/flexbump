@@ -1,0 +1,793 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lib_parallel &#8212; Flexible integration of continuous sensory evidence in perceptual estimation tasks</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/crm.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/read-more.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="shortcut icon" href="../_static/flexbump_icon.svg"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint">⚠ Warning! Under development! ⚠</div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/flex_bump.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Flexible integration of continuous sensory evidence in perceptual estimation tasks</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Flexible integration of continuous sensory evidence in perceptual estimation tasks
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../howto/index.html">
+   Getting started
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../user_guide/index.html">
+   User guide
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data/index.html">
+   Data
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../code/index.html">
+   API Reference
+  </a>
+  <input checked class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../code/utils_libraries.html">
+     Auxiliary libraries
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../code/generated/lib_parallel.ParallelSimulation.__init__.html">
+       lib_parallel.ParallelSimulation.__init__
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../code/generated/lib_parallel.ParallelSimulation.__call__.html">
+       lib_parallel.ParallelSimulation.__call__
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../code/generated/lib_parallel.ParallelSimulation.distribute_trials.html">
+       lib_parallel.ParallelSimulation.distribute_trials
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../code/generated/lib_parallel.ParallelSimulation.run_task_unpack.html">
+       lib_parallel.ParallelSimulation.run_task_unpack
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../code/generated/lib_parallel.ParallelSimulation.poolcontext.html">
+       lib_parallel.ParallelSimulation.poolcontext
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../code/generated/lib_parallel.ParallelSimulation.worker.html">
+       lib_parallel.ParallelSimulation.worker
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../code/generated/lib_parallel.ParallelSimulation.print_table.html">
+       lib_parallel.ParallelSimulation.print_table
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../code/generated/lib_sconf.parser_init.html">
+       lib_sconf.parser_init
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../code/generated/lib_sconf.parser.html">
+       lib_sconf.parser
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../code/generated/lib_sconf.log_conf.html">
+       lib_sconf.log_conf
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../code/generated/lib_sconf.MyLog.html">
+       lib_sconf.MyLog
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../code/generated/lib_sconf.debug_func.html">
+       lib_sconf.debug_func
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../code/generated/lib_sconf.count_calls.html">
+       lib_sconf.count_calls
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../code/generated/lib_sconf.get_paths.html">
+       lib_sconf.get_paths
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../code/generated/lib_sconf.create_dir.html">
+       lib_sconf.create_dir
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../code/generated/lib_sconf.path_exists.html">
+       lib_sconf.path_exists
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../code/generated/lib_sconf.check_overwrite.html">
+       lib_sconf.check_overwrite
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../code/generated/lib_sconf.save_obj.html">
+       lib_sconf.save_obj
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../code/generated/lib_sconf.load_obj.html">
+       lib_sconf.load_obj
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../code/generated/lib_sconf.now.html">
+       lib_sconf.now
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../code/generated/lib_sconf.yesno_question.html">
+       lib_sconf.yesno_question
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../code/generated/lib_sconf.isnotebook.html">
+       lib_sconf.isnotebook
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../code/generated/lib_sconf.print_at.html">
+       lib_sconf.print_at
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../code/generated/lib_sconf.LimitedSizeDict.html">
+       lib_sconf.LimitedSizeDict
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../code/generated/lib_sconf.dict_depth.html">
+       lib_sconf.dict_depth
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../code/generated/lib_sconf.fmt_latex_table.html">
+       lib_sconf.fmt_latex_table
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../code/generated/lib_sconf.truncate.html">
+       lib_sconf.truncate
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/wimmerlab/flexbump"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/wimmerlab/flexbump/issues/new?title=Issue%20on%20page%20%2F_modules/lib_parallel.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1></h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <h1>Source code for lib_parallel</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Parallelization library for trial-based simulations</span>
+<span class="sd">===================================================</span>
+
+<span class="sd">.. module:: lib_parallel</span>
+<span class="sd">   :platform: Linux</span>
+<span class="sd">   :synopsis: module for handling parallel computation of simulations</span>
+
+<span class="sd">.. moduleauthor:: Jose M. Esnaola-Acebes &lt;josemesnaola@gmail.com&gt;</span>
+
+<span class="sd">This library contains a parallelization class (:class:`ParallelSimulation`) which is thought to</span>
+<span class="sd">run trial-based simulations in parallel using the CPU multi-core capability. The class</span>
+<span class="sd">distributes trials among the CPU cores using :mod:`multiprocessing` module in chunks of trials (``chunk_size``)</span>
+<span class="sd">defined by the user.</span>
+
+<span class="sd">.. note::</span>
+
+<span class="sd">   This library is not designed to run spiking network simulations in parallel.</span>
+
+
+<span class="sd">Methods included in :class:`ParallelSimulation`</span>
+<span class="sd">-----------------------------------------------</span>
+
+<span class="sd">.. autosummary::</span>
+<span class="sd">   :toctree: generated/</span>
+
+<span class="sd">   ParallelSimulation.__init__           .. Initialization of the parallel framework.</span>
+<span class="sd">   ParallelSimulation.__call__           .. Execution: call to trial distributor and simulation.</span>
+<span class="sd">   ParallelSimulation.distribute_trials  .. Set up the iterator that is passed to :func:`pool.starmap_async`</span>
+<span class="sd">   ParallelSimulation.run_task_unpack    .. Intermediary function that unpacks arguments, separating</span>
+<span class="sd">                                         .. simulation-specific arguments and those related to the</span>
+<span class="sd">                                         .. parallelization process.</span>
+
+<span class="sd">Static methods included in :class:`ParallelSimulation`</span>
+<span class="sd">------------------------------------------------------</span>
+
+<span class="sd">.. autosummary::</span>
+<span class="sd">   :toctree: generated/</span>
+
+<span class="sd">   ParallelSimulation.poolcontext        .. Auxiliary function that modifies the behavior of a *Terminate* signal.</span>
+<span class="sd">   ParallelSimulation.worker             .. Function that extracts the first integer value out of a string:</span>
+<span class="sd">                                         .. useful to get the worker&#39;s *id*.</span>
+<span class="sd">   ParallelSimulation.print_table        .. Print a table with a given number of rows and columns, and their</span>
+<span class="sd">                                         .. associated titles and headers.</span>
+
+<span class="sd">Implementation</span>
+<span class="sd">--------------</span>
+
+<span class="sd">In order to use this library, the main function that runs the simulation (``func``) must have a given format.</span>
+<span class="sd">Specifically, input and output data must be formatted as n-dimensional :mod:`numpy` arrays where the last</span>
+<span class="sd">axis of those matrices stores the trial indices.</span>
+
+<span class="sd">Format of simulation input and output variables</span>
+<span class="sd">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
+
+<span class="sd">Input data must be passed to :class:`ParallelSimulation` when called in two separated sets of data:</span>
+
+<span class="sd"> 1. ``local_args``: Input data that is **distributed** among trials, e.g. different stimuli data.</span>
+<span class="sd"> 2. ``global_args``: Input data which is **common** (global) to all trials.</span>
+
+<span class="sd">The distributed data, ``local_args`` must be passed as a :py:mod:`numpy` ``np.ndarray`` with shape</span>
+<span class="sd">:math:`\\left(d_1, d_2, \\dots, d_n\\right)`, where :math:`d_i,\\ i = 1, 2, \\dots, n` are the dimensions</span>
+<span class="sd">of the axis of the matrix, and **most importantly**, :math:`d_n` is the number of trials that we want to simulate.</span>
+
+<span class="sd">.. admonition:: Example</span>
+
+<span class="sd">    If we are simulating the firing rate response of a network to a time-varying stimuli of the form :math:`s(t)`</span>
+<span class="sd">    which we could code as a :mod:`numpy` array, ::</span>
+
+<span class="sd">        stimuli = np.random.randn(tpoints)</span>
+
+<span class="sd">    then, if we assume that we want different stimuli at each trial, we would have a matrix containing all stimuli</span>
+<span class="sd">    data of the form ::</span>
+
+<span class="sd">        n_trials = 1000</span>
+<span class="sd">        stimuli = np.random.randn(tpoints, n_trials)</span>
+
+<span class="sd">On the other hand, common input data can have any format and will be passed to the simulation function ``fun``</span>
+<span class="sd">as it is. Refer to :ref:`_parallel-execution` for more information on how to pass this data.</span>
+
+<span class="sd">Output data is **collected** by the :py:mod:`multiprocessing` ``pool`` object, and its format will depend on the</span>
+<span class="sd">``return`` clause used in the simulation function ``fun``. In any case, output data will be collected by the</span>
+<span class="sd">multi-thread manager in a ``list`` where each element contains a block of the output data. Each block will contain</span>
+<span class="sd">a number of trials equal to the selected ``chunk_size``. Therefore the number of blocks is determined by the</span>
+<span class="sd">number of trials and the choice of ``chunk_size``: ``n_b = n_trials // chunk_size``.</span>
+
+<span class="sd">.. _parallel-setup:</span>
+
+<span class="sd">Set up the parallel framework</span>
+<span class="sd">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
+
+<span class="sd">The parallel framework is initialize by creating a new :class:`ParallelSimulation` instance as follows,</span>
+
+<span class="sd">.. code-block:: python</span>
+
+<span class="sd">    parallel_simu = ParallelSimulation(simulation_func, n_trials, chunk_size, n_processes)</span>
+
+<span class="sd">Where ``simulation_func`` is the main function that performs the simulation, ``n_trials`` is the number of trials,</span>
+<span class="sd">``chunk_size`` is the number of trials that is simulated at each block, and ``n_processes`` is the number of</span>
+<span class="sd">processes/workers that the pool will have. Typically, best performance is achieve with a number of workers equal to</span>
+<span class="sd">the number of available threads, or alternatively to the number of cores that CPU has.</span>
+
+<span class="sd">.. _parallel-execution:</span>
+
+<span class="sd">Running the simulation: execution</span>
+<span class="sd">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
+
+<span class="sd">Once the initialization (:ref:`_parallel-setup`) is done we are ready to launch the simulation by calling</span>
+<span class="sd">the just created parallelization object ``parallel_simu``</span>
+
+<span class="sd">.. code-block:: python</span>
+
+<span class="sd">    results = parallel_simu(local_args, global_args)</span>
+
+<span class="sd">Where both ``local_args`` and ``global_args`` are passed as ``tuple``s.</span>
+
+<span class="sd">.. admonition:: Example</span>
+
+<span class="sd">    Taking the previously shown example of the input data ``stimuli``, and assuming that our simulation also needs</span>
+<span class="sd">    some additional **global** arguments, such as an array of labels ``global_labels`` and a dictionary of</span>
+<span class="sd">    parameters ``prmts_dict``, the execution should be written</span>
+
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        results = parallel_simu((stimuli, ), (global_labels, prmts_dict))</span>
+
+<span class="sd">    .. note::</span>
+
+<span class="sd">        If the distributed arguments consists in a unique object, as shown in the example above, then we may just</span>
+<span class="sd">        pass the argument without the tuple format: ``parallel_simu(stimuli, (global_labels, prmts_dict))``.</span>
+
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">pathlib</span>
+<span class="kn">import</span> <span class="nn">ctypes</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">multiprocessing</span> <span class="k">as</span> <span class="nn">mp</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">signal</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">timeit</span>
+<span class="kn">from</span> <span class="nn">contextlib</span> <span class="kn">import</span> <span class="n">contextmanager</span>
+<span class="kn">from</span> <span class="nn">multiprocessing.managers</span> <span class="kn">import</span> <span class="n">SyncManager</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">absolute</span><span class="p">()</span><span class="o">.</span><span class="n">as_posix</span><span class="p">())</span>
+    <span class="kn">from</span> <span class="nn">lib_sconf</span> <span class="kn">import</span> <span class="n">print_at</span>
+<span class="k">except</span> <span class="ne">ImportError</span> <span class="k">as</span> <span class="n">imp_err</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="n">imp_err</span>
+
+
+<span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;lib_parallel&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">NullHandler</span><span class="p">())</span>
+
+<span class="n">__author__</span> <span class="o">=</span> <span class="s1">&#39;Jose M. Esnaola-Acebes&#39;</span>
+<span class="n">__docformat__</span> <span class="o">=</span> <span class="s1">&#39;reStructuredText&#39;</span>
+
+
+<div class="viewcode-block" id="ParallelSimulation"><a class="viewcode-back" href="../code/utils_libraries.html#lib_parallel.ParallelSimulation">[docs]</a><span class="k">class</span> <span class="nc">ParallelSimulation</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; Create a new pool-based multiprocess framework to run simulations in parallel. &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="ParallelSimulation.__init__"><a class="viewcode-back" href="../code/generated/lib_parallel.ParallelSimulation.__init__.html#lib_parallel.ParallelSimulation.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fun</span><span class="p">,</span> <span class="n">n_trials</span><span class="p">,</span> <span class="n">chunk_size</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">processes</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">show_progress</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Initialization of :class:`ParallelSimulation`.</span>
+
+<span class="sd">        :param function fun: function to run in parallel.</span>
+<span class="sd">        :param int n_trials: number of trials that the simulation must be run.</span>
+<span class="sd">        :param int chunk_size: number of trials that will be simulated in each function call.</span>
+<span class="sd">        :param int processes: number of threads (workers) to be employed in the pool.</span>
+<span class="sd">        :param bool show_progress: whether to show the progress of the execution through stdout.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;ParallelSimulation&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fun</span> <span class="o">=</span> <span class="n">fun</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n</span> <span class="o">=</span> <span class="n">n_trials</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cs</span> <span class="o">=</span> <span class="n">chunk_size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_b</span> <span class="o">=</span> <span class="n">n_trials</span> <span class="o">//</span> <span class="n">chunk_size</span>  <span class="c1"># Number of blocks</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Chunk size (</span><span class="si">{</span><span class="n">chunk_size</span><span class="si">}</span><span class="s2">) should be smaller than the number of trials (</span><span class="si">{</span><span class="n">n_trials</span><span class="si">}</span><span class="s2">).&quot;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">processes</span> <span class="o">=</span> <span class="n">processes</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">show_progress</span> <span class="o">=</span> <span class="n">show_progress</span>
+        <span class="c1"># noinspection PyTypeChecker</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__computed_blocks</span> <span class="o">=</span> <span class="n">mp</span><span class="o">.</span><span class="n">Value</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span><span class="p">)</span>  <span class="c1"># Variable that will monitor started blocks</span></div>
+
+<div class="viewcode-block" id="ParallelSimulation.__call__"><a class="viewcode-back" href="../code/generated/lib_parallel.ParallelSimulation.__call__.html#lib_parallel.ParallelSimulation.__call__">[docs]</a>    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">local_args</span><span class="p">,</span> <span class="n">global_args</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Run the simulations in parallel.</span>
+
+<span class="sd">        :param tuple local_args: arguments that will be distributed across the workers (trials).</span>
+<span class="sd">        :param tuple global_args: arguments that will be passed to all trials.</span>
+<span class="sd">        :return: output of function ``fun`` arranged in a list of blocks of size ``chunk_size``. If a TimeOut</span>
+<span class="sd">                 occurred due to a SIGINT signal, then returns -1.</span>
+<span class="sd">        :rtype: list</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">time1</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span>
+        <span class="c1"># Manager that is able to communicate with the workers in the pool</span>
+        <span class="n">manager</span> <span class="o">=</span> <span class="n">SyncManager</span><span class="p">()</span>  <span class="c1"># using SyncManager() directly instead of letting mp.Manager() do it for us</span>
+        <span class="n">manager</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mgr_init</span><span class="p">)</span>  <span class="c1"># start the child manager process</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__computed_blocks</span> <span class="o">=</span> <span class="n">manager</span><span class="o">.</span><span class="n">Value</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1"># &#39;Share&#39; this variable with all the workers</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__n_block</span> <span class="o">=</span> <span class="n">manager</span><span class="o">.</span><span class="n">Array</span><span class="p">(</span><span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">processes</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">))</span>
+        <span class="c1"># Start the pool and run the distributed simulation</span>
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">poolcontext</span><span class="p">(</span><span class="n">processes</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">processes</span><span class="p">)</span> <span class="k">as</span> <span class="n">pool</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Distributing trials in </span><span class="si">%d</span><span class="s1"> pools:&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">processes</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">show_progress</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">print_table</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">processes</span><span class="p">)</span>  <span class="c1"># Print a table for monitoring the progress</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">results</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">distribute_trials</span><span class="p">(</span><span class="n">pool</span><span class="p">,</span> <span class="n">local_args</span><span class="p">,</span> <span class="n">global_args</span><span class="p">)</span>  <span class="c1"># Distribute trials among workers</span>
+                <span class="k">while</span> <span class="ow">not</span> <span class="n">results</span><span class="o">.</span><span class="n">ready</span><span class="p">()</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">show_progress</span><span class="p">:</span>  <span class="c1"># Monitor the progress</span>
+                    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">processes</span><span class="p">):</span>
+                        <span class="n">print_at</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%10d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__n_block</span><span class="p">[</span><span class="n">w</span><span class="p">]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">cs</span><span class="p">),</span> <span class="mi">12</span> <span class="o">*</span> <span class="n">w</span> <span class="o">+</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">cursor</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">__computed_blocks</span><span class="o">.</span><span class="n">value</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">processes</span><span class="p">:</span>
+                        <span class="n">progress</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">*</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__computed_blocks</span><span class="o">.</span><span class="n">value</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">cs</span><span class="p">)</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">n</span>
+                        <span class="n">print_at</span><span class="p">(</span><span class="s2">&quot;T:   </span><span class="si">%3d%%</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">progress</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">cursor</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">print_at</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%4d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__computed_blocks</span><span class="o">.</span><span class="n">value</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">cs</span><span class="p">),</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">cursor</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+                <span class="n">results</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>  <span class="c1"># Check if process has finished</span>
+            <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>  <span class="c1"># Listen to Interrupt signals (Ctrl + C)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">__log</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Caught KeyboardInterrupt, terminating workers&quot;</span><span class="p">)</span>
+                <span class="n">pool</span><span class="o">.</span><span class="n">terminate</span><span class="p">()</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">__log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Computation finished in </span><span class="si">{}</span><span class="s2"> s.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span> <span class="o">-</span> <span class="n">time1</span><span class="p">))</span>
+                <span class="n">pool</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="n">manager</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
+            <span class="n">pool</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">results</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">mp</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">TimeoutError</span><span class="p">:</span>
+            <span class="k">return</span> <span class="o">-</span><span class="mi">1</span></div>
+
+<div class="viewcode-block" id="ParallelSimulation.distribute_trials"><a class="viewcode-back" href="../code/utils_libraries.html#lib_parallel.ParallelSimulation.distribute_trials">[docs]</a>    <span class="k">def</span> <span class="nf">distribute_trials</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pool</span><span class="p">,</span> <span class="n">local_args</span><span class="p">,</span> <span class="n">glob_args</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Distributes input data ``local_args`` among workers in ``pool``.</span>
+
+<span class="sd">        :param mp.Pool pool: Pool of workers.</span>
+<span class="sd">        :param tuple local_args: Local arguments to be distributed among workers.</span>
+<span class="sd">        :param tuple glob_args: Global arguments to be passed to all workers.</span>
+<span class="sd">        :return: a list with whatever ``fun`` returns.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Check that local_args has been packed appropriately, i.e. as a tuple</span>
+        <span class="n">local_args</span> <span class="o">=</span> <span class="p">(</span><span class="n">local_args</span><span class="p">,)</span> <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">local_args</span><span class="p">,</span> <span class="p">(</span><span class="nb">tuple</span><span class="p">,</span> <span class="nb">list</span><span class="p">))</span> <span class="k">else</span> <span class="n">local_args</span>
+        <span class="c1"># Build the iterable</span>
+        <span class="n">pool_task_args</span> <span class="o">=</span> <span class="p">[(</span><span class="bp">self</span><span class="o">.</span><span class="n">fun</span><span class="p">,</span> <span class="p">(</span><span class="n">k</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span>  <span class="c1"># Pool specific variables</span>
+                           <span class="nb">tuple</span><span class="p">([</span><span class="n">arg</span><span class="p">[</span><span class="n">k</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">cs</span><span class="p">:(</span><span class="n">k</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">cs</span><span class="p">]</span> <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">local_args</span><span class="p">]</span>  <span class="c1"># Task distributed vars</span>
+                                 <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">glob_args</span><span class="p">)))</span>  <span class="c1"># Task global variables</span>
+                          <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n_b</span><span class="p">)]</span>
+        <span class="k">return</span> <span class="n">pool</span><span class="o">.</span><span class="n">starmap_async</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">run_task_unpack</span><span class="p">,</span> <span class="n">iterable</span><span class="o">=</span><span class="n">pool_task_args</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ParallelSimulation.run_task_unpack"><a class="viewcode-back" href="../code/utils_libraries.html#lib_parallel.ParallelSimulation.run_task_unpack">[docs]</a>    <span class="k">def</span> <span class="nf">run_task_unpack</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fun</span><span class="p">,</span> <span class="n">block_n</span><span class="p">,</span> <span class="n">task_args</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Prepare the simulation function ``fun`` to be called by the worker. This function</span>
+<span class="sd">        receives arguments which are specific of a worker (distribution has already been done).</span>
+<span class="sd">        Prints the progress of each ``worker`` and pass the input arguments to the simulation</span>
+<span class="sd">        function.</span>
+
+<span class="sd">        :param function fun: simulation function.</span>
+<span class="sd">        :param int block_n: the block number that is currently being processed by this worker.</span>
+<span class="sd">        :param tuple task_args: task specific arguments arranged in a tuple that is expanded when calling the</span>
+<span class="sd">                                simulation function ``fun``.</span>
+<span class="sd">        :return: results of the simulation ``fun``.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># Variables to update progress monitoring</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">show_progress</span><span class="p">:</span>
+            <span class="n">cpr</span> <span class="o">=</span> <span class="n">mp</span><span class="o">.</span><span class="n">current_process</span><span class="p">()</span>
+            <span class="n">worker</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">worker</span><span class="p">(</span><span class="n">cpr</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">processes</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__computed_blocks</span><span class="o">.</span><span class="n">value</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__n_block</span><span class="p">[</span><span class="n">worker</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">fun</span><span class="p">(</span><span class="o">*</span><span class="n">task_args</span><span class="p">,</span> <span class="n">block</span><span class="o">=</span><span class="n">block_n</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ParallelSimulation.poolcontext"><a class="viewcode-back" href="../code/utils_libraries.html#lib_parallel.ParallelSimulation.poolcontext">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="nd">@contextmanager</span>
+    <span class="k">def</span> <span class="nf">poolcontext</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Modify the default signal handling behavior of :class:`~multiprocessing.pool.Pool` to ignore the</span>
+<span class="sd">        ``SIGINT`` (Ctrl + C) signal.</span>
+
+<span class="sd">        .. warning::</span>
+
+<span class="sd">           In order to be able to stop the process it is necessary to catch the ``SIGINT`` signal, with a</span>
+<span class="sd">           ``try``-``except`` clause for example.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Setup parallel framework</span>
+        <span class="n">original_sigint_handler</span> <span class="o">=</span> <span class="n">signal</span><span class="o">.</span><span class="n">signal</span><span class="p">(</span><span class="n">signal</span><span class="o">.</span><span class="n">SIGINT</span><span class="p">,</span> <span class="n">signal</span><span class="o">.</span><span class="n">SIG_IGN</span><span class="p">)</span>
+        <span class="n">pool</span> <span class="o">=</span> <span class="n">mp</span><span class="o">.</span><span class="n">Pool</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">signal</span><span class="o">.</span><span class="n">signal</span><span class="p">(</span><span class="n">signal</span><span class="o">.</span><span class="n">SIGINT</span><span class="p">,</span> <span class="n">original_sigint_handler</span><span class="p">)</span>
+        <span class="k">yield</span> <span class="n">pool</span>
+        <span class="n">pool</span><span class="o">.</span><span class="n">terminate</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="ParallelSimulation.mgr_init"><a class="viewcode-back" href="../code/utils_libraries.html#lib_parallel.ParallelSimulation.mgr_init">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">mgr_init</span><span class="p">():</span>
+        <span class="sd">&quot;&quot;&quot;Auxiliary function to modify the default behavior of :py:class:`multiprocessing.Manager` when</span>
+<span class="sd">        receiving a ``SIGING`` (Ctrl + C) signal.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">signal</span><span class="o">.</span><span class="n">signal</span><span class="p">(</span><span class="n">signal</span><span class="o">.</span><span class="n">SIGINT</span><span class="p">,</span> <span class="n">signal</span><span class="o">.</span><span class="n">SIG_IGN</span><span class="p">)</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Initializing multiprocessing manager ...&#39;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ParallelSimulation.worker"><a class="viewcode-back" href="../code/utils_libraries.html#lib_parallel.ParallelSimulation.worker">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">worker</span><span class="p">(</span><span class="n">cpr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">processes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">real</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return the worker&#39;s id associated to the process ``cpr`` in a the range [1, processes].</span>
+
+<span class="sd">        :param mp.Process or None cpr: Multiprocessing current process (equivalent to :py:class:`threading.Thread`).</span>
+<span class="sd">        :param int or None processes: number of processes that are being run.</span>
+<span class="sd">        :param bool real: whether to return the worker&#39;s complete id or not.</span>
+<span class="sd">        :return: id of the worker.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">cpr</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">cpr</span> <span class="o">=</span> <span class="n">mp</span><span class="o">.</span><span class="n">current_process</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">processes</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">processes</span> <span class="o">=</span> <span class="n">mp</span><span class="o">.</span><span class="n">cpu_count</span><span class="p">()</span>
+        <span class="n">wid</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s2">&quot;\d+&quot;</span><span class="p">,</span> <span class="n">cpr</span><span class="o">.</span><span class="n">name</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">real</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">wid</span>
+        <span class="k">return</span> <span class="p">((</span><span class="n">wid</span> <span class="o">%</span> <span class="n">processes</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">processes</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span> <span class="o">%</span> <span class="n">processes</span></div>
+
+<div class="viewcode-block" id="ParallelSimulation.print_table"><a class="viewcode-back" href="../code/utils_libraries.html#lib_parallel.ParallelSimulation.print_table">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">print_table</span><span class="p">(</span><span class="n">n_cols</span><span class="p">,</span> <span class="n">row_titles</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;Trial&#39;</span><span class="p">,),</span> <span class="n">cfmt</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot; Thread </span><span class="si">%2d</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">wcol0</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">wcoln</span><span class="o">=</span><span class="mi">11</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Prints a fancy table to stdout. It uses extended ASCII characters, therefore, not</span>
+<span class="sd">        all terminals will display the table correctly.</span>
+
+<span class="sd">        :param int n_cols: number of columns.</span>
+<span class="sd">        :param tuple of str row_titles: Titles of the rows. Length of the provided iterable will determine the</span>
+<span class="sd">                                        number of rows.</span>
+<span class="sd">        :param str cfmt: format of the title of columns.</span>
+<span class="sd">        :param int wcol0: width of first column, where the title of rows is printed.</span>
+<span class="sd">        :param int wcoln: width of the rest of the columns.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">top_ln</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;╔&quot;</span><span class="o">.</span><span class="n">rjust</span><span class="p">(</span><span class="n">wcol0</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="s2">&quot;═&quot;</span> <span class="o">*</span> <span class="n">wcoln</span> <span class="o">+</span> <span class="s2">&quot;╤&quot;</span><span class="p">)</span> <span class="o">*</span> <span class="n">n_cols</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;╗&quot;</span>
+        <span class="n">header</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;║&quot;</span><span class="o">.</span><span class="n">rjust</span><span class="p">(</span><span class="n">wcol0</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([(</span><span class="n">cfmt</span> <span class="o">%</span> <span class="p">(</span><span class="n">k</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">wcoln</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;│&quot;</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_cols</span><span class="p">)]))[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;║&quot;</span>
+        <span class="n">sup_ln</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;╔&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="n">wcol0</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="s2">&quot;═&quot;</span> <span class="o">+</span> <span class="s2">&quot;╬&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="s2">&quot;═&quot;</span> <span class="o">*</span> <span class="n">wcoln</span> <span class="o">+</span> <span class="s2">&quot;╪&quot;</span><span class="p">)</span> <span class="o">*</span> <span class="n">n_cols</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;╣&quot;</span>
+        <span class="n">mid_ln</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;╟&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="n">wcol0</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="s2">&quot;─&quot;</span> <span class="o">+</span> <span class="s2">&quot;╫&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="s2">&quot;─&quot;</span> <span class="o">*</span> <span class="n">wcoln</span> <span class="o">+</span> <span class="s2">&quot;┼&quot;</span><span class="p">)</span> <span class="o">*</span> <span class="n">n_cols</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;╢&quot;</span>
+        <span class="n">bot_ln</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;╚&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="n">wcol0</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="s2">&quot;═&quot;</span> <span class="o">+</span> <span class="s2">&quot;╩&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="s2">&quot;═&quot;</span> <span class="o">*</span> <span class="n">wcoln</span> <span class="o">+</span> <span class="s2">&quot;╧&quot;</span><span class="p">)</span> <span class="o">*</span> <span class="n">n_cols</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;╝&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">row_titles</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">)):</span>
+            <span class="n">row_titles</span> <span class="o">=</span> <span class="p">[</span><span class="n">row_titles</span><span class="p">]</span>
+        <span class="n">rows</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">title</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">row_titles</span><span class="p">):</span>
+            <span class="n">rows</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="s2">&quot;║&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">title</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">wcol0</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;║&quot;</span> <span class="o">+</span> <span class="s2">&quot;│&quot;</span><span class="o">.</span><span class="n">rjust</span><span class="p">(</span><span class="n">wcoln</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">n_cols</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;║&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Print table</span>
+        <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="p">[</span><span class="n">top_ln</span><span class="p">,</span> <span class="n">header</span><span class="p">,</span> <span class="n">sup_ln</span><span class="p">]:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+        <span class="k">while</span> <span class="n">rows</span><span class="p">:</span>
+            <span class="n">row</span> <span class="o">=</span> <span class="n">rows</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">mid_ln</span><span class="p">)</span> <span class="k">if</span> <span class="n">rows</span> <span class="k">else</span> <span class="nb">print</span><span class="p">(</span><span class="n">bot_ln</span><span class="p">)</span></div></div>
+</pre></div>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Jose M. Esnaola-Acebes, Alex Roxin, Klaus Wimmer<br/>
+  
+      &copy; Copyright 2022, Jose M. Esnaola-Acebes, Alex Roxin, Klaus Wimmer.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

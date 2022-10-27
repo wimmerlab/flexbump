@@ -1,0 +1,6 @@
+﻿lib\_sconf.path\_exists
+=======================
+
+.. currentmodule:: lib_sconf
+
+.. autofunction:: path_exists

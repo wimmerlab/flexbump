@@ -1,0 +1,6 @@
+﻿lib\_sconf.check\_overwrite
+===========================
+
+.. currentmodule:: lib_sconf
+
+.. autofunction:: check_overwrite

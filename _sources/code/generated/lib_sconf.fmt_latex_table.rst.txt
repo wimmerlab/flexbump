@@ -1,0 +1,6 @@
+﻿lib\_sconf.fmt\_latex\_table
+============================
+
+.. currentmodule:: lib_sconf
+
+.. autofunction:: fmt_latex_table

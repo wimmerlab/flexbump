@@ -1,0 +1,6 @@
+﻿lib\_sconf.print\_at
+====================
+
+.. currentmodule:: lib_sconf
+
+.. autofunction:: print_at

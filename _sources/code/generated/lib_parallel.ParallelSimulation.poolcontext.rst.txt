@@ -1,0 +1,6 @@
+﻿lib\_parallel.ParallelSimulation.poolcontext
+============================================
+
+.. currentmodule:: lib_parallel
+
+.. automethod:: ParallelSimulation.poolcontext

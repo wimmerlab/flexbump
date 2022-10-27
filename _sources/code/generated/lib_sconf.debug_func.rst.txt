@@ -1,0 +1,6 @@
+﻿lib\_sconf.debug\_func
+======================
+
+.. currentmodule:: lib_sconf
+
+.. autofunction:: debug_func

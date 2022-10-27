@@ -1,0 +1,6 @@
+﻿lib\_sconf.yesno\_question
+==========================
+
+.. currentmodule:: lib_sconf
+
+.. autofunction:: yesno_question

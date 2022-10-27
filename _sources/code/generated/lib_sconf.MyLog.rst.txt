@@ -1,0 +1,23 @@
+﻿lib\_sconf.MyLog
+================
+
+.. currentmodule:: lib_sconf
+
+.. autoclass:: MyLog
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~MyLog.__init__
+      ~MyLog.msg
+   
+   
+
+   
+   
+   

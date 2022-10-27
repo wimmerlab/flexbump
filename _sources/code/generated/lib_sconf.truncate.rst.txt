@@ -1,0 +1,6 @@
+﻿lib\_sconf.truncate
+===================
+
+.. currentmodule:: lib_sconf
+
+.. autofunction:: truncate

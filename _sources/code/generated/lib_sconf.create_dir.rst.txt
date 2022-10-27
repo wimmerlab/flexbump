@@ -1,0 +1,6 @@
+﻿lib\_sconf.create\_dir
+======================
+
+.. currentmodule:: lib_sconf
+
+.. autofunction:: create_dir

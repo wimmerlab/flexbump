@@ -1,0 +1,6 @@
+﻿lib\_sconf.count\_calls
+=======================
+
+.. currentmodule:: lib_sconf
+
+.. autofunction:: count_calls

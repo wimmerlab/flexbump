@@ -1,0 +1,6 @@
+﻿lib\_parallel.ParallelSimulation.print\_table
+=============================================
+
+.. currentmodule:: lib_parallel
+
+.. automethod:: ParallelSimulation.print_table

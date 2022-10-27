@@ -1,0 +1,6 @@
+﻿lib\_parallel.ParallelSimulation.\_\_call\_\_
+=============================================
+
+.. currentmodule:: lib_parallel
+
+.. automethod:: ParallelSimulation.__call__

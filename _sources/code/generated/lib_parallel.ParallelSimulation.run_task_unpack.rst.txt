@@ -1,0 +1,6 @@
+﻿lib\_parallel.ParallelSimulation.run\_task\_unpack
+==================================================
+
+.. currentmodule:: lib_parallel
+
+.. automethod:: ParallelSimulation.run_task_unpack

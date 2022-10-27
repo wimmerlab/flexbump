@@ -1,0 +1,6 @@
+﻿lib\_sconf.save\_obj
+====================
+
+.. currentmodule:: lib_sconf
+
+.. autofunction:: save_obj

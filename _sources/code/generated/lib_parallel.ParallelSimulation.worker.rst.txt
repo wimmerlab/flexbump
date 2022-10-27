@@ -1,0 +1,6 @@
+﻿lib\_parallel.ParallelSimulation.worker
+=======================================
+
+.. currentmodule:: lib_parallel
+
+.. automethod:: ParallelSimulation.worker

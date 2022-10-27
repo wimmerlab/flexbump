@@ -1,0 +1,6 @@
+﻿lib\_sconf.now
+==============
+
+.. currentmodule:: lib_sconf
+
+.. autofunction:: now

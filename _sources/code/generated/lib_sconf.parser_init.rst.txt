@@ -1,0 +1,6 @@
+﻿lib\_sconf.parser\_init
+=======================
+
+.. currentmodule:: lib_sconf
+
+.. autofunction:: parser_init

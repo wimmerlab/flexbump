@@ -1,0 +1,6 @@
+﻿lib\_sconf.isnotebook
+=====================
+
+.. currentmodule:: lib_sconf
+
+.. autofunction:: isnotebook
