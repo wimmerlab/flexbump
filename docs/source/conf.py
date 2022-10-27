@@ -55,6 +55,7 @@ extensions = [
     "sphinx_togglebutton",
     "sphinx_design",
     "sphinxarg.ext",
+    "sphinxcontrib.youtube",
 ]
 
 master_doc = "index"
