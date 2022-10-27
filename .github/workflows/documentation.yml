@@ -13,7 +13,7 @@ jobs:
           pip install -r install/docs_requirements.txt
       - name: Sphinx build
         run: |
-          cd docs && make html
+          cd docs && make clean && make html
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/docs' }}
