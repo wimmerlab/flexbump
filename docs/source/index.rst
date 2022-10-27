@@ -42,73 +42,79 @@ simulate the ring model navigate towards the :ref:`howto` page. A more detailed 
 :ref:`user` or directly at :ref:`code`. Finally, the documentation of the experimental
 data is located at :ref:`data`.
 
-.. panels::
-    :card: + intro-card text-center shadow
-    :column: col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex
+.. grid:: 2
 
-    ---
-    :img-top: ./_static/index-images/getting_started.svg
+    .. grid-item-card::
+       :img-top: ./_static/index-images/getting_started.svg
 
-    Getting started
-    ^^^^^^^^^^^^^^^
+       Getting started
+       ^^^^^^^^^^^^^^^
 
-    How to use the scripts, generate the figures, etc.
+       How to use the scripts, generate the figures, etc.
 
-    +++
+       +++
 
-    .. link-button:: howto/index
-        :type: ref
-        :text: Start here
-        :classes: btn-block btn-secondary stretched-link
+       .. button-ref:: howto/index
+           :click-parent:
+           :expand:
+           :color: secondary
+
+           Start here
 
 
-    ---
-    :img-top: ./_static/index-images/user_guide.svg
+    .. grid-item-card::
+       :img-top: ./_static/index-images/user_guide.svg
 
-    User guide
-    ^^^^^^^^^^
+       User guide
+       ^^^^^^^^^^
 
-    Detailed overview of the simulation framework.
+       Detailed overview of the simulation framework.
 
-    +++
+       +++
 
-    .. link-button:: user_guide/index
-        :type: ref
-        :text: To the user guide
-        :classes: btn-block btn-secondary stretched-link
+       .. button-ref:: user_guide/index
+           :click-parent:
+           :expand:
+           :color: secondary
 
-    ---
-    :img-top: ./_static/index-images/data.svg
+           To the user guide
 
-    Data
-    ^^^^
+    .. grid-item-card::
+       :img-top: ./_static/index-images/data.svg
 
-    Sources of data.
+       Data
+       ^^^^
 
-    Extraction of data.
+       Sources of data.
 
-    +++
+       Extraction of data.
 
-    .. link-button:: data/index
-        :type: ref
-        :text: Data documentation
-        :classes: btn-block btn-secondary stretched-link
+       +++
 
-    ---
-    :img-top: ./_static/index-images/api.svg
+       .. button-ref:: data/index
+           :click-parent:
+           :expand:
+           :color: secondary
 
-    API reference
-    ^^^^^^^^^^^^^
+           Data documentation
 
-    The reference guide contains a description of the functions, modules and objects
-    included in these repository.
+    .. grid-item-card::
+       :img-top: ./_static/index-images/api.svg
 
-    +++
+       API reference
+       ^^^^^^^^^^^^^
 
-    .. link-button:: code/index
-        :type: ref
-        :text: To the api guide
-        :classes: btn-block btn-secondary stretched-link
+       The reference guide contains a description of the functions, modules and objects
+       included in these repository.
+
+       +++
+
+       .. button-ref:: code/index
+           :click-parent:
+           :expand:
+           :color: secondary
+
+           To the api guide
 
 
 .. toctree::

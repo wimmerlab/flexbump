@@ -53,7 +53,7 @@ extensions = [
     "sphinx.ext.githubpages",
     "sphinx_copybutton",
     "sphinx_togglebutton",
-    "sphinx_panels",
+    "sphinx_design",
     "sphinxarg.ext",
 ]
 

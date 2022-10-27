@@ -709,26 +709,30 @@ def now(daysep=', ', hoursep=':'):
     return sday, shour
 
 
-def get_paths(filename):
-    """Gets the real path of the ``filename``, its directory and the current working directory.
-    :param str filename: Name of file (it can be a relative path, an absolute path or just the file name).
+def get_paths(filename: str) -> dict:
+    """
+    Gets the real path of the ``filename``, its directory and the current working directory.
+
+    :param filename: Name of file (it can be a relative path, an absolute path or just the file name).
     :return: dictionary including the file path (``s_path``), directory (``s_dir``) and
              current working directory (``dir``).
-    :rtype: dict
+
     """
+
     scriptpath = os.path.realpath(filename)
     scriptdir = os.path.dirname(scriptpath)
     cwd = os.getcwd()
     return {'s_path': scriptpath, 's_dir': scriptdir, 'dir': cwd}
 
 
-def create_dir(folder_path):
-    """Create a directory at ``folder_path`` if it does not exist yet.
-
-    :param str folder_path: name of the desired folder. It can be a relative path or an absolute path.
-    :return: 0 if no exceptions were raised.
-    :rtype: int
+def create_dir(folder_path: str) -> int:
     """
+    Create a directory at ``folder_path`` if it does not exist yet.
+
+    :param folder_path: name of the desired folder. It can be a relative path or an absolute path.
+    :return: 0 if no exceptions were raised.
+    """
+
     if not path_exists(folder_path):
         try:
             os.makedirs(folder_path)
