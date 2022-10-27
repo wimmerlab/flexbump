@@ -7,4 +7,5 @@ Getting started
    :animate: fade-in-slide-down
 
    .. youtube:: 0dgwUee6lxE
+      :align: center
 
