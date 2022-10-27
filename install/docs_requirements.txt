@@ -71,6 +71,7 @@ sphinxcontrib-htmlhelp
 sphinxcontrib-jsmath
 sphinxcontrib-qthelp
 sphinxcontrib-serializinghtml
+sphinxcontrib-youtube
 stack-data
 tinycss2
 tornado
